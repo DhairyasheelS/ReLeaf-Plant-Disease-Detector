@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ReLeaf</string>
+    <string name="descriptionImage" />
+    <string name="buttonSelectPhoto" />
+    <string name="buttonTakePhoto" />
+</resources>
