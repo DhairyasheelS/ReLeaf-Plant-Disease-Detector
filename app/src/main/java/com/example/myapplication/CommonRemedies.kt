@@ -25,14 +25,17 @@ class CommonRemedies : AppCompatActivity() {
         val resultText = intent.getStringExtra("text")
         resTextView.text = resultText
 
-        if (resultText == "potato late blight") {
-            val remedies = "Remedies for potato late blight:\n" +
-                    "1) Leaf curl can be controlled by applying sulfur or\n"
-                    "copper-based fungicides that are labeled for use on"+
-                    "peaches and nectarines.\n"+
-                    " Spray the entire tree after 90% of the leaves have"+
-                    "dropped in the fall and again in the early spring."
-            textview2.text = remedies
+        if (resultText != null) {
+            if (resultText.contains("potato late blight",ignoreCase=true) ) {
+                Log.d("if", "enter if ")
+                val remedies =
+                        "1)	Remove volunteers from the garden prior to planting and space plants far enough apart to allow for plenty of air circulation.\n"+"\n"+
+                        "2)	Apply a copper based fungicide (2 oz/ gallon of water) every 7 days \n or less, following heavy rain or when the amount of disease is increasing rapidly.\n"+"\n"+
+                        "3)If possible , time applications so that at least 12 hours of dry weather follows application."
+
+                textview2.text = remedies
+            }
+
         }
 
         val imageByteArray = intent.getByteArrayExtra("image")
