@@ -59,11 +59,11 @@ class MainActivity : AppCompatActivity() {
 //        mCameraButton.startAnimation(bounceAnimation)
 //        mGalleryButton.startAnimation(bounceAnimation)
 //        mDetectButton.startAnimation(bounceAnimation)
-        val imageView = findViewById<ImageView>(R.id.imageView2)
-        val imageView1 = findViewById<ImageView>(R.id.imageView6)
-        val fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.animation)
-        imageView.startAnimation(fadeInAnimation)
-        imageView1.startAnimation(fadeInAnimation)
+//        val imageView = findViewById<ImageView>(R.id.imageView2)
+//        val imageView1 = findViewById<ImageView>(R.id.imageView6)
+//        val fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.animation)
+//        imageView.startAnimation(fadeInAnimation)
+//        imageView1.startAnimation(fadeInAnimation)
 
 
         mClassifier = Classifier(assets, mModelPath, mLabelPath, mInputSize)
