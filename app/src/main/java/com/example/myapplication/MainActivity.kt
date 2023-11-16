@@ -22,6 +22,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.ByteArrayOutputStream
 import java.io.IOException
+import android.view.animation.AnimationUtils
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mClassifier: Classifier
@@ -54,10 +55,18 @@ class MainActivity : AppCompatActivity() {
         mDetectButton = findViewById(R.id.mDetectButton)
         mResultTextView = findViewById(R.id.mResultTextView)
 
-        mClassifier = Classifier(assets, mModelPath, mLabelPath, mInputSize)
+//        val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.button_bounce)
+//        mCameraButton.startAnimation(bounceAnimation)
+//        mGalleryButton.startAnimation(bounceAnimation)
+//        mDetectButton.startAnimation(bounceAnimation)
+        val imageView = findViewById<ImageView>(R.id.imageView2)
+        val imageView1 = findViewById<ImageView>(R.id.imageView6)
+        val fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.animation)
+        imageView.startAnimation(fadeInAnimation)
+        imageView1.startAnimation(fadeInAnimation)
 
-        // Check and request necessary permissions
-//        requestPermissions()
+
+        mClassifier = Classifier(assets, mModelPath, mLabelPath, mInputSize)
 
         // Load the sample image
         try {
